@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<title>RAPPORTO DI CONTROLLO DI EFFICIENZA ENERGETICA TIPO 1 (gruppi termici)</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+	<h2>RAPPORTO DI CONTROLLO DI EFFICIENZA ENERGETICA TIPO 1 (gruppi termici)</h2>
+	<h3>A. DATI IDENTIFICATIVI</h3>
+	<form class="form-inline" action="/action_page.php">
+		<div class="form-group">
+			<label for="cod_catasto">Inserisci codice catasto</label>
+			<input type="text" class="form-control" id="cod_catasto" placeholder="Codice" name="cod_catasto">
+		</div>
+		<h4>Impianto:</h4>
+		<div class="form-group">
+			<label for="pot_tot_max">di Potenza termica nominale totale max (Kw)</label>
+			<input type="text" class="form-control" id="pot_tot_max" placeholder="" name="pot_tot_max">
+		</div>
+		<div class="form-group">
+			<label for="comuneImp">Sito nel comune</label>
+			<input type="text" class="form-control" id="comuneImp" placeholder="" name="comuneImp">
+		</div>
+		<div class="form-group">
+			<label for="provincia">provincia di</label>
+			<input type="text" class="form-control" id="provincia" placeholder="" name="provincia">
+		</div>
+		<div class="form-group">
+			<label for="indirizzo">indirizzo</label>
+			<input type="text" class="form-control" id="indirizzo" placeholder="" name="indirizzo">
+		</div>
+		<div class="form-group">
+			<label for="numero">numero</label>
+			<input type="text" class="form-control" id="numero" placeholder="" name="numero">
+		</div>
+		<div class="form-group">
+			<label for="palazzo">palazzo</label>
+			<input type="text" class="form-control" id="palazzo" placeholder="" name="palazzo">
+		</div>
+		<div class="form-group">
+			<label for="scala">scala</label>
+			<input type="text" class="form-control" id="scala" placeholder="" name="scala">
+		</div>
+		<div class="form-group">
+			<label for="interno">interno</label>
+			<input type="text" class="form-control" id="interno" placeholder="" name="interno">
+		</div>
+
+		<h4>Responsabile dell'impianto</h4>
+
+		<div class="form-group">
+			<label for="cognome">cognome</label>
+			<input type="text" class="form-control" id="cognome" placeholder="" name="cognome">
+		</div>
+		<div class="form-group">
+		<label for="nome">nome</label>
+		<input type="text" class="form-control" id="nome" placeholder="" name="nome">
+	</div>
+		<div class="form-group">
+		<label for="cod_fisc">codice fiscale</label>
+		<input type="text" class="form-control" id="cod_fisc" placeholder="" name="cod_fisc">
+	</div>
+		<div class="form-group">
+		<label for="ragione_sociale">Ragione sociale</label>
+		<input type="text" class="form-control" id="ragione_sociale" placeholder="" name="ragione_sociale">
+	</div>
+		<div class="form-group">
+		<label for="IVA">Partita IVA</label>
+		<input type="text" class="form-control" id="IVA" placeholder="" name="IVA">
+	</div>
+		<div class="form-group">
+		<label for="indirizzoResp">Indirizzo</label>
+		<input type="text" class="form-control" id="indirizzoResp" placeholder="" name="indirizzoResp">
+	</div>
+		<div class="form-group">
+		<label for="numeroResp">Numero</label>
+		<input type="text" class="form-control" id="numeroResp" placeholder="" name="numeroResp">
+	</div>
+		<div class="form-group">
+		<label for="comuneResp">Comune</label>
+		<input type="text" class="form-control" id="comuneResp" placeholder="" name="comuneResp">
+	</div>
+		<div class="form-group">
+		<label for="provinciaResp">Provincia</label>
+		<input type="text" class="form-control" id="provinciaResp" placeholder="" name="provinciaResp">
+	</div>
+		<br>
+		<h5>Titolo di responsabilità:</h5>
+		<div class="form-group">
+		<div class="checkbox">
+			<label><input type="checkbox" name="proprietario"> Proprietario</label>
+			<label><input type="checkbox" name="occupante"> Occupante</label>
+			<label><input type="checkbox" name="amministratore"> Amministratore condominio</label>
+			<label><input type="checkbox" name="terzo"> Terzo responsabile</label>
+		</div>
+		</div>
+		<br>
+
+		<h4>Impresa manutentrice</h4>
+		<div class="form-group">
+			<label for="ragioneManut">Ragione sociale</label>
+			<input type="text" class="form-control" id="ragioneManut" placeholder="" name="ragioneManut">
+		</div>
+		<div class="form-group">
+		<label for="IVAmanut">Partita IVA</label>
+		<input type="text" class="form-control" id="IVAmanut" placeholder="" name="IVAmanut">
+	    </div>
+		<div class="form-group">
+			<label for="indirizzoManut">Indirizzo</label>
+			<input type="text" class="form-control" id="indirizzoManut" placeholder="" name="indirizzoManut">
+		</div>
+		<div class="form-group">
+			<label for="numeroManut">Numero</label>
+			<input type="text" class="form-control" id="numeroManut" placeholder="" name="numeroManut">
+		</div>
+		<div class="form-group">
+			<label for="comuneManut">Comune</label>
+			<input type="text" class="form-control" id="comuneManut" placeholder="" name="comuneManut">
+		</div>
+		<div class="form-group">
+			<label for="provinciaManut">Provincia</label>
+			<input type="text" class="form-control" id="provinciaManut" placeholder="" name="provinciaManut">
+		</div>
+
+		<h3>B. DOCUMENTAZIONE TECNICA A CORREDO </h3>
+		<div class="form-group">
+			<label for="text1">dichiarazione di conformità presente</label>
+			<input type="text" class="form-control" id="text1" placeholder="" name="text1" style="display: none">
+			<div class="checkbox">
+				<label><input type="checkbox" name="text1check1"> SI</label>
+				<label><input type="checkbox" name="text1check2"> NO</label>
+			</div>
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="text2">libretto impianto presente</label>
+			<input type="text" class="form-control" id="text2" placeholder="" name="text2" style="display: none">
+			<div class="checkbox">
+				<label><input type="checkbox" name="text2check1"> SI</label>
+				<label><input type="checkbox" name="text2check2"> NO</label>
+			</div>
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="text3">Libretti uso/manutenzione generatore presenti</label>
+			<input type="text" class="form-control" id="text3" placeholder="" name="text3" style="display: none">
+			<div class="checkbox">
+				<label><input type="checkbox" name="text3check1"> SI</label>
+				<label><input type="checkbox" name="text3check2"> NO</label>
+			</div>
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="text4">Libretto compilato in tutte le sue parti</label>
+			<input type="text" class="form-control" id="text4" placeholder="" name="text4" style="display: none">
+			<div class="checkbox">
+				<label><input type="checkbox" name="text4check1"> SI</label>
+				<label><input type="checkbox" name="text4check2"> NO</label>
+			</div>
+		</div>
+<br>
+		<h3>C. TRATTAMENTO DELL'ACQUA</h3>
+		<div class="form-group">
+			<label for="durezza">Durezza totale dell'acqua</label>
+			<input type="text" class="form-control" id="durezza" placeholder="" name="durezza">
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="text5">Trattamento in riscaldamento:</label>
+			<input type="text" class="form-control" id="text5" placeholder="" name="text5" style="display: none">
+			<div class="checkbox">
+				<label><input type="checkbox" name="text5check1"> non richiesto</label>
+				<label><input type="checkbox" name="text5check2"> Assente</label>
+				<label><input type="checkbox" name="text5check3"> Filtrazione</label>
+				<label><input type="checkbox" name="text5check4"> Addolcimento</label>
+				<label><input type="checkbox" name="text5check5"> Condizionamento chimito</label>
+			</div>
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="text6">Trattamento in ACS:</label>
+			<input type="text" class="form-control" id="text6" placeholder="" name="text6" style="display: none">
+			<div class="checkbox">
+				<label><input type="checkbox" name="text6check1"> non richiesto</label>
+				<label><input type="checkbox" name="text6check2"> Assente</label>
+				<label><input type="checkbox" name="text6check3"> Filtrazione</label>
+				<label><input type="checkbox" name="text6check4"> Addolcimento</label>
+				<label><input type="checkbox" name="text6check5"> Condizionamento chimito</label>
+			</div>
+		</div>
+		<br>
+		<h3>D. CONTROLLO DELL'IMPIANTO</h3>
+
+		<div class="form-group">
+			<label for="text7">Per installazione interna: in locale idoneo</label>
+			<input type="text" class="form-control" id="text7" placeholder="" name="text7" style="display: none">
+			<div class="checkbox">
+				<label><input type="checkbox" name="text7check1"> SI</label>
+				<label><input type="checkbox" name="text7check2"> NO</label>
+				<label><input type="checkbox" name="text7check3"> NC</label>
+			</div>
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="text8">Per installazione esterna: generatori idonei</label>
+			<input type="text" class="form-control" id="text8" placeholder="" name="text8" style="display: none">
+			<div class="checkbox">
+				<label><input type="checkbox" name="text8check1"> SI</label>
+				<label><input type="checkbox" name="text8check2"> NO</label>
+				<label><input type="checkbox" name="text8check3"> NC</label>
+			</div>
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="text9">Aperture ventilazione/aerazione libere da ostruzioni</label>
+			<input type="text" class="form-control" id="text9" placeholder="" name="text9" style="display: none">
+			<div class="checkbox">
+				<label><input type="checkbox" name="text9check1"> SI</label>
+				<label><input type="checkbox" name="text9check2"> NO</label>
+				<label><input type="checkbox" name="text9check3"> NC</label>
+			</div>
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="text10">Adeguate dimensioni aperture di ventilazione/aerazione</label>
+			<input type="text" class="form-control" id="text10" placeholder="" name="text10" style="display: none">
+			<div class="checkbox">
+				<label><input type="checkbox" name="text10check1"> SI</label>
+				<label><input type="checkbox" name="text10check2"> NO</label>
+				<label><input type="checkbox" name="text10check3"> NC</label>
+			</div>
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="text11">Canale da fumo o condotti di scarico idonei (esame visivo)</label>
+			<input type="text" class="form-control" id="text11" placeholder="" name="text11" style="display: none">
+			<div class="checkbox">
+				<label><input type="checkbox" name="text11check1"> SI</label>
+				<label><input type="checkbox" name="text11check2"> NO</label>
+				<label><input type="checkbox" name="text11check3"> NC</label>
+			</div>
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="text12">Sistema di regolazione temperatura ambiente funzionante</label>
+			<input type="text" class="form-control" id="text12" placeholder="" name="text12" style="display: none">
+			<div class="checkbox">
+				<label><input type="checkbox" name="text12check1"> SI</label>
+				<label><input type="checkbox" name="text12check2"> NO</label>
+				<label><input type="checkbox" name="text12check3"> NC</label>
+			</div>
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="text13">Assenza di perdite di combustibile liquido </label>
+			<input type="text" class="form-control" id="text13" placeholder="" name="text13" style="display: none">
+			<div class="checkbox">
+				<label><input type="checkbox" name="text13check1"> SI</label>
+				<label><input type="checkbox" name="text13check2"> NO</label>
+				<label><input type="checkbox" name="text13check3"> NC</label>
+			</div>
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="text14">Idonea tenuta dell’impianto interno e raccordi con il generatore</label>
+			<input type="text" class="form-control" id="text14" placeholder="" name="text14" style="display: none">
+			<div class="checkbox">
+				<label><input type="checkbox" name="text14check1"> SI</label>
+				<label><input type="checkbox" name="text14check2"> NO</label>
+				<label><input type="checkbox" name="text14check3"> NC</label>
+			</div>
+		</div>
+		<br>
+		<h3>E. CONTROLLO E VERIFICA ENERGETICA DEL GRUPPO TERMICO GT</h3>
+		<div class="form-group">
+			<label for="data_ins">data installazione</label>
+			<input type="text" class="form-control" id="data_ins" placeholder="" name="data_ins">
+		</div>
+		<div class="form-group">
+			<label for="fabbricante">Fabbricante</label>
+			<input type="text" class="form-control" id="fabbricante" placeholder="" name="fabbricante">
+		</div>
+		<div class="form-group">
+			<label for="modello">Modello</label>
+			<input type="text" class="form-control" id="modello" placeholder="" name="modello">
+		</div>
+		<div class="form-group">
+			<label for="matricola">Matricola</label>
+			<input type="text" class="form-control" id="matricola" placeholder="" name="matricola">
+		</div>
+		<div class="form-group">
+			<label for="max_foco">Pot.term. nominale max al focolare (Kw)</label>
+			<input type="text" class="form-control" id="max_foco" placeholder="" name="max_foco">
+		</div>
+		<div class="form-group">
+			<label for="nom_utile">Pot.term. nominale utile (Kw)</label>
+			<input type="text" class="form-control" id="nom_utile" placeholder="" name="nom_utile">
+		</div>
+		<div class="form-group">
+			<label for="depressione">Depressione nel canale da fumo (Pa)</label>
+			<input type="text" class="form-control" id="depressione" placeholder="" name="depressione">
+		</div>
+		<br><br>
+		<div class="checkbox">
+			<label><input type="checkbox" name="text14check1"> gruppo termico singolo</label>
+			<label><input type="checkbox" name="text14check2"> gruppo termico modulare</label>
+			<label><input type="checkbox" name="text14check3"> tubo/nastro radiante</label>
+			<label><input type="checkbox" name="text14check1"> generatore d'aria calda</label>
+			<label><input type="checkbox" name="text14check2"> climatizzazione invernale</label>
+			<label><input type="checkbox" name="text14check3"> produzione ACS</label>
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="text15">Combustibile</label>
+			<input type="text" class="form-control" id="text15" placeholder="" name="text15" style="display: none">
+			<div class="checkbox">
+				<label><input type="checkbox" name="text15check1"> GPL</label>
+				<label><input type="checkbox" name="text15check2"> Gas naturale</label>
+				<label><input type="checkbox" name="text15check3"> Gasolio</label>
+				<label><input type="checkbox" name="text15check4"> Altro</label>
+				<input type="text" class="form-control" id="text15check4" placeholder="" name="num" style="display: none">
+			</div>
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="text16">Modalità evacuazione fumi</label>
+			<input type="text" class="form-control" id="text16" placeholder="" name="text16" style="display: none">
+			<div class="checkbox">
+				<label><input type="checkbox" name="text16check1"> NATURALE</label>
+				<label><input type="checkbox" name="text16check2"> FORZATA</label>
+
+			</div>
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="text17">Dispositivi di comando e regolazione funzionanti correttamente</label>
+			<input type="text" class="form-control" id="text17" placeholder="" name="text17" style="display: none">
+			<div class="checkbox">
+				<label><input type="checkbox" name="text17check1"> SI</label>
+				<label><input type="checkbox" name="text17check2"> NO</label>
+				<label><input type="checkbox" name="text17check3"> NC</label>
+			</div>
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="text18">Dispositivi di sicurezza non manomessi e/o cortocircuitati</label>
+			<input type="text" class="form-control" id="text18" placeholder="" name="text18" style="display: none">
+			<div class="checkbox">
+				<label><input type="checkbox" name="text18check1"> SI</label>
+				<label><input type="checkbox" name="text18check2"> NO</label>
+				<label><input type="checkbox" name="text18check3"> NC</label>
+			</div>
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="text19">Valvola di sicurezza alla sovrapressione a scarico libero</label>
+			<input type="text" class="form-control" id="text19" placeholder="" name="text19" style="display: none">
+			<div class="checkbox">
+				<label><input type="checkbox" name="text19check1"> SI</label>
+				<label><input type="checkbox" name="text19check2"> NO</label>
+				<label><input type="checkbox" name="text19check3"> NC</label>
+			</div>
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="text20">Risultati controllo, secondo UNI 10389-1, conformi alla legge</label>
+			<input type="text" class="form-control" id="text20" placeholder="" name="text20" style="display: none">
+			<div class="checkbox">
+				<label><input type="checkbox" name="text20check1"> SI</label>
+				<label><input type="checkbox" name="text20check2"> NO</label>
+				<label><input type="checkbox" name="text20check3"> NC</label>
+			</div>
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="text21">Controllato e pulito lo scambiatore lato fumi</label>
+			<input type="text" class="form-control" id="text21" placeholder="" name="text21" style="display: none">
+			<div class="checkbox">
+				<label><input type="checkbox" name="text21check1"> SI</label>
+				<label><input type="checkbox" name="text21check2"> NO</label>
+				<label><input type="checkbox" name="text21check3"> NC</label>
+			</div>
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="text22">Presenza riflusso dei prodotti della combustione</label>
+			<input type="text" class="form-control" id="text22" placeholder="" name="text22" style="display: none">
+			<div class="checkbox">
+				<label><input type="checkbox" name="text22check1"> SI</label>
+				<label><input type="checkbox" name="text22check2"> NO</label>
+				<label><input type="checkbox" name="text22check3"> NC</label>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="form-group">
+			<label for="temperatura">Temperatura fumi (C°)</label>
+			<input type="text" class="form-control" id="temperatura" placeholder="" name="temperatura">
+		</div>
+		<div class="form-group">
+			<label for="temperaturaAria">Temperatura aria comburente (C°)</label>
+			<input type="text" class="form-control" id="temperaturaAria" placeholder="" name="temperaturaAria">
+		</div>
+		<div class="form-group">
+			<label for="O2">O2 (%)</label>
+			<input type="text" class="form-control" id="O2" placeholder="" name="O2">
+		</div>
+		<div class="form-group">
+			<label for="C2">C2 (%)</label>
+			<input type="text" class="form-control" id="C2" placeholder="" name="C2">
+		</div>
+		<div class="form-group">
+			<label for="Bacharach">Bacharach</label>
+			<input type="date" class="form-control" id="Bacharach" placeholder="" name="Bacharach">
+		</div>
+		<div class="form-group">
+			<label for="CO_corretto">CO corretto (PPM) </label>
+			<input type="text" class="form-control" id="CO_corretto" placeholder="" name="CO_corretto">
+		</div>
+		<div class="form-group">
+			<label for="rendimento">Rendimento di combustione (%)</label>
+			<input type="text" class="form-control" id="rendimento" placeholder="" name="rendimento">
+		</div>
+		<div class="form-group">
+			<label for="rendimento_legge">Rendimento minimo di legge (%)</label>
+			<input type="text" class="form-control" id="rendimento_legge" placeholder="" name="rendimento_legge">
+		</div>
+		<div class="form-group">
+			<label for="modulo">Modulo termico</label>
+			<input type="text" class="form-control" id="modulo" placeholder="" name="modulo">
+		</div>
+		<br>
+		<h3>F. CHECK-LIST</h3>
+		<br>
+		<div class="form-group">
+			<label for="text23">Elenco di possibili interventi, dei quali va valutata la convenienza economica, che qualora applicabili all’impianto, potrebbero comportare un miglioramento
+				della prestazione energetica:</label>
+			<input type="text" class="form-control" id="text23" placeholder="" name="text23" style="display: none">
+			<div class="checkbox">
+				<label><input type="checkbox" name="text23check1"> L’adozione di valvole termostatiche sui corpi scaldanti</label>
+				<label><input type="checkbox" name="text23check2"> L’isolamento della rete di distribuzione nei locali non riscaldati</label>
+				<label><input type="checkbox" name="text23check3"> L’introduzione di un sistema di trattamento dell’acqua sanitaria e per riscaldamento, ove assente</label>
+				<label><input type="checkbox" name="text23check4"> La sostituzione di un sistema di regolazione on/off con un sistema programmabile su più livelli di temperatura.</label>
+			</div>
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="osservazioni">Osservazioni</label>
+			<textarea type="text" class="form-control" id="osservazioni" placeholder="" name="osservazioni"></textarea>
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="raccomandazioni">Raccomandazioni</label>
+			<textarea type="text" class="form-control" id="raccomandazioni" placeholder="" name="raccomandazioni"></textarea>
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="prescrizioni">Prescrizioni</label>
+			<textarea type="text" class="form-control" id="prescrizioni" placeholder="" name="prescrizioni"></textarea>
+		</div>
+		<br>
+		<h4>Il tecnico dichiara, in riferimento ai punti A,B,C,D,E (sopra menzionati), che l’apparecchio può essere messo in servizio ed usato normalmente
+			ai fini dell’efficienza energetica senza compromettere la sicurezza delle persone, degli animali e dei beni. </h4>
+		<div class="form-group">
+			<label for="text24">L’impianto può funzionare</label>
+			<input type="text" class="form-control" id="text24" placeholder="" name="text24" style="display: none">
+			<div class="checkbox">
+				<label><input type="checkbox" name="text24check1"> SI</label>
+				<label><input type="checkbox" name="text24check2"> NO</label>
+			</div>
+		</div>
+			<br>
+		<h5>Il tecnico declina altresì ogni responsabilità per sinistri a persone, animali o cose derivanti da manomissioni dell’impianto o dell’apparecchio da parte di terzi,
+			ovvero da carenza di manutenzione successiva. In presenza di carenze riscontrate e non eliminate, il responsabile dell’impianto si impegna, entro breve
+			tempo, a provvedere alla loro risoluzione dandone notizia all’operatore incaricato.</h5>
+		<div class="form-group">
+			<label for="scadenza"> Si raccomanda un intervento manutentivo entro il</label>
+			<input type="date" class="form-control" id="scadenza" placeholder="" name="scadenza">
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="presente">data del presente controllo</label>
+			<input type="date" class="form-control" id="presente" placeholder="" name="presente">
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="time">ora di arrivo</label>
+			<input type="time" class="form-control" id="time" placeholder="" name="time">
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="manut">Nome completo manutentore</label>
+			<input type="text" class="form-control" id="manut" placeholder="" name="manut">
+		</div>
+		<br><br>
+		<button>INOLTRA TUTTO</button>
+	</form>
+</div>
+
+</body>
+<style>
+	@media print {
+		* { margin: 0 !important; padding: 0 !important; }
+		#controls, .footer, .footerarea{ display: none; }
+		html, body {
+			/*changing width to 100% causes huge overflow and wrap*/
+			height:100%;
+			overflow: hidden;
+			background: #FFF;
+			font-size: 9.5pt;
+		}
+
+		.container { width: auto; left:0; top:0; }
+		img { width:100%; }
+		li { margin: 0 0 10px 20px !important;}
+	}
+
+	@page {
+		size: A4;
+	}
+</style>
+
+</html>
